@@ -1,0 +1,11 @@
+{
+  "name": "pokeidle-online-independent",
+  "version": "1.0.0",
+  "description": "RPG de captura e caça automática para navegador, com servidor Node.js persistente",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "engines": {"node": ">=20"}
+}

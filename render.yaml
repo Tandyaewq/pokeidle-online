@@ -1,0 +1,13 @@
+# Deploy gratuito de TESTE. O sistema salva contas e progresso somente na instancia temporaria.
+# Quando a Render reinicia, redeploya ou troca a instancia, esses dados podem ser perdidos.
+services:
+  - type: web
+    name: pokeidle-alola-demo
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
